@@ -2,18 +2,18 @@ public class MyStackTest {
 
     public static void main(String[] args) {
 
-        MyStack stack = new MyStack(5);
+        MyStack<Integer> intStack = new MyStack<>();
 
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
+        intStack.push(10);
+        intStack.push(20);
 
-        System.out.println("Top: " + stack.top());
+        System.out.println(intStack.top());
 
-        stack.pop();
+        MyStack<String> stringStack = new MyStack<>();
 
-        System.out.println("Top after pop: " + stack.top());
-        System.out.println("Size: " + stack.getSize());
-        System.out.println("Empty: " + stack.isEmpty());
+        stringStack.push("Java");
+        stringStack.push("Stack");
+
+        System.out.println(stringStack.top());
     }
 }
